@@ -13,39 +13,87 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Core">
+    <Filter Include="klui">
       <UniqueIdentifier>{749de844-092e-440d-9007-9cae7d3c73ef}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Shader">
-      <UniqueIdentifier>{c33b4d92-b871-4a16-94a3-bbdfb3926189}</UniqueIdentifier>
+    <Filter Include="klui\Header Files">
+      <UniqueIdentifier>{8c46613b-8fe0-4798-9f14-5a49556c4768}</UniqueIdentifier>
     </Filter>
-    <Filter Include="World">
-      <UniqueIdentifier>{4c179989-d4ab-4f4a-b10e-76b2e849cb00}</UniqueIdentifier>
+    <Filter Include="klui\Source Files">
+      <UniqueIdentifier>{0dc88719-3648-429c-a936-89f6cce071fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene">
+      <UniqueIdentifier>{a541a59e-47f2-436e-b66a-15142fae17dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene\Header Files">
+      <UniqueIdentifier>{d0fc821b-9a66-44b6-bcf6-faed6fcfaf08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene\Source Files">
+      <UniqueIdentifier>{5ffb3b52-fe20-4996-b638-ae6f85c9b617}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="klui_tester.cpp">
-      <Filter>Core</Filter>
+    <ClCompile Include="klui.cpp">
+      <Filter>klui\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Core</Filter>
+    <ClCompile Include="klui_tester.cpp">
+      <Filter>klui\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Panels.cpp">
-      <Filter>Core</Filter>
+      <Filter>klui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>klui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>klui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>scene\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>scene\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>scene\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIElement.cpp">
+      <Filter>klui\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="klui.hpp">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Window.hpp">
-      <Filter>Core</Filter>
+      <Filter>klui\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Panels.hpp">
-      <Filter>Core</Filter>
+      <Filter>klui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.hpp">
+      <Filter>klui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.hpp">
+      <Filter>klui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>klui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="World.hpp">
+      <Filter>scene\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.hpp">
+      <Filter>scene\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.hpp">
+      <Filter>scene\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIElement.hpp">
+      <Filter>klui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.hpp">
+      <Filter>scene\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
