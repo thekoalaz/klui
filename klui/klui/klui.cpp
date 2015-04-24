@@ -11,10 +11,10 @@ using namespace klui;
 /** Manages and exposes all the UI elements
  *
 **/
-void Manager::init()
+void Manager::init(int width, int height)
 {
     clock = sf::Clock();
-    Window * main_window = new Window(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+    Window * main_window = new Window(appname_, width, height);
     windows_.push_back(main_window);
 }
 
@@ -44,9 +44,9 @@ Window & Manager::createWindow(int width, int height)
     return *new_window;
 }
 
-Window & Manager::createWindow(int width, int height, std::string name)
+Window & Manager::createWindow(std::string name, int width, int height)
 {
-    Window * new_window = new Window(width, height, name);
+    Window * new_window = new Window(name, width, height);
     windows_.push_back(new_window);
     return *new_window;
 }

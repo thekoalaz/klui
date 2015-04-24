@@ -24,12 +24,12 @@ public:
     /* Constructors */
     Window(int width, int height) : UIElement(width, height, DEFAULT_WINDOWNAME), init_(false)
         { init(); }
-    Window(int width, int height, std::string name) : UIElement(width, height, name), init_(false)
+    Window(std::string name, int width, int height) : UIElement(width, height, name), init_(false)
         { init(); }
 
     void init();
     void draw();
-    void reshape(int w, int h);
+    void reshape(int, int);
 
     bool isOpen() { return window->isOpen(); }
     
