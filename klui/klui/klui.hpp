@@ -3,7 +3,7 @@
 #include "Window.hpp"
 #include "Panels.hpp"
 #include "Button.hpp"
-#include "World.hpp"
+#include "scene/World.hpp"
 
 namespace klui
 {

@@ -1,6 +1,7 @@
 #pragma once
+#include "stdafx.h"
 #include "UIElement.hpp"
-#include "scene.hpp"
+#include "scene/scene.hpp"
 #include "Button.hpp"
 
 namespace klui

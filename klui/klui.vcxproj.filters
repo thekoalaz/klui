@@ -36,64 +36,61 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="klui.cpp">
-      <Filter>klui\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="klui_tester.cpp">
-      <Filter>klui\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Panels.cpp">
-      <Filter>klui\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>klui\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Button.cpp">
-      <Filter>klui\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="World.cpp">
-      <Filter>scene\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>scene\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Object.cpp">
-      <Filter>scene\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UIElement.cpp">
-      <Filter>klui\Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="klui.hpp">
+    <ClInclude Include="klui\Button.hpp">
       <Filter>klui\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Panels.hpp">
+    <ClInclude Include="klui\klui.hpp">
       <Filter>klui\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Window.hpp">
+    <ClInclude Include="klui\Panels.hpp">
       <Filter>klui\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Button.hpp">
+    <ClInclude Include="klui\UIElement.hpp">
       <Filter>klui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="klui\Window.hpp">
+      <Filter>klui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scene\scene.hpp">
+      <Filter>scene\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scene\World.hpp">
+      <Filter>scene\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scene\Camera.hpp">
+      <Filter>scene\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scene\Object.hpp">
+      <Filter>scene\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>klui\Header Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="World.hpp">
-      <Filter>scene\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Camera.hpp">
-      <Filter>scene\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Object.hpp">
-      <Filter>scene\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="UIElement.hpp">
-      <Filter>klui\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="scene.hpp">
-      <Filter>scene\Header Files</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="klui\klui.cpp">
+      <Filter>klui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="klui\Panels.cpp">
+      <Filter>klui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="klui\UIElement.cpp">
+      <Filter>klui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="klui\Window.cpp">
+      <Filter>klui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="klui\Button.cpp">
+      <Filter>klui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scene\World.cpp">
+      <Filter>scene\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scene\Camera.cpp">
+      <Filter>scene\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scene\Object.cpp">
+      <Filter>scene\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

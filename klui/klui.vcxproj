@@ -16,7 +16,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -47,6 +47,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -70,27 +71,26 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Button.hpp" />
-    <ClInclude Include="Camera.hpp" />
-    <ClInclude Include="klui.hpp" />
-    <ClInclude Include="Object.hpp" />
-    <ClInclude Include="Panels.hpp" />
-    <ClInclude Include="scene.hpp" />
+    <ClInclude Include="klui\Button.hpp" />
+    <ClInclude Include="klui\klui.hpp" />
+    <ClInclude Include="klui\Panels.hpp" />
+    <ClInclude Include="klui\UIElement.hpp" />
+    <ClInclude Include="klui\Window.hpp" />
+    <ClInclude Include="scene\Camera.hpp" />
+    <ClInclude Include="scene\Object.hpp" />
+    <ClInclude Include="scene\scene.hpp" />
+    <ClInclude Include="scene\World.hpp" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="UIElement.hpp" />
-    <ClInclude Include="Window.hpp" />
-    <ClInclude Include="World.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Button.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="klui.cpp" />
-    <ClCompile Include="klui_tester.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="Panels.cpp" />
-    <ClCompile Include="UIElement.cpp" />
-    <ClCompile Include="Window.cpp" />
-    <ClCompile Include="World.cpp" />
+    <ClCompile Include="klui\Button.cpp" />
+    <ClCompile Include="klui\klui.cpp" />
+    <ClCompile Include="klui\Panels.cpp" />
+    <ClCompile Include="klui\UIElement.cpp" />
+    <ClCompile Include="klui\Window.cpp" />
+    <ClCompile Include="scene\Camera.cpp" />
+    <ClCompile Include="scene\Object.cpp" />
+    <ClCompile Include="scene\World.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
