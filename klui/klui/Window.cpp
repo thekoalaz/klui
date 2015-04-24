@@ -1,5 +1,8 @@
 #include "stdafx.h"
 #include "Window.hpp"
+#include <GL/glew.h>
+#include <GL/glut.h>
+
 
 using namespace std;
 using namespace klui;

@@ -1,6 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "UIElement.hpp"
+#include <SFML/Graphics.hpp>
 
 namespace klui
 { 

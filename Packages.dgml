@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="klui" Label="klui" Category="Project" />
+    <Node Id="glm 0.9.6.3" Label="glm 0.9.6.3" Category="Package" />
+    <Node Id="nupengl.core 0.0.0.1" Label="nupengl.core 0.0.0.1" Category="Package" />
+    <Node Id="nupengl.core.redist 0.0.0.1" Label="nupengl.core.redist 0.0.0.1" Category="Package" />
+    <Node Id="sfml-graphics 2.2.0.1" Label="sfml-graphics 2.2.0.1" Category="Package" />
+    <Node Id="sfml-graphics.redist 2.2.0.1" Label="sfml-graphics.redist 2.2.0.1" Category="Package" />
+    <Node Id="sfml-system 2.2.0.1" Label="sfml-system 2.2.0.1" Category="Package" />
+    <Node Id="sfml-system.redist 2.2.0.1" Label="sfml-system.redist 2.2.0.1" Category="Package" />
+    <Node Id="sfml-window 2.2.0.1" Label="sfml-window 2.2.0.1" Category="Package" />
+    <Node Id="sfml-window.redist 2.2.0.1" Label="sfml-window.redist 2.2.0.1" Category="Package" />
+  </Nodes>
+  <Links>
+    <Link Source="nupengl.core 0.0.0.1" Target="nupengl.core.redist 0.0.0.1" Category="Package Dependency" />
+    <Link Source="sfml-graphics 2.2.0.1" Target="sfml-window 2.2.0.1" Category="Package Dependency" />
+    <Link Source="sfml-graphics 2.2.0.1" Target="sfml-system 2.2.0.1" Category="Package Dependency" />
+    <Link Source="sfml-graphics 2.2.0.1" Target="sfml-graphics.redist 2.2.0.1" Category="Package Dependency" />
+    <Link Source="sfml-system 2.2.0.1" Target="sfml-system.redist 2.2.0.1" Category="Package Dependency" />
+    <Link Source="sfml-window 2.2.0.1" Target="sfml-system 2.2.0.1" Category="Package Dependency" />
+    <Link Source="sfml-window 2.2.0.1" Target="sfml-window.redist 2.2.0.1" Category="Package Dependency" />
+    <Link Source="klui" Target="glm 0.9.6.3" Category="Installed Package" />
+    <Link Source="klui" Target="nupengl.core 0.0.0.1" Category="Installed Package" />
+    <Link Source="klui" Target="sfml-graphics 2.2.0.1" Category="Installed Package" />
+  </Links>
+  <Categories>
+    <Category Id="Project" />
+    <Category Id="Package" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>
