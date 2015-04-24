@@ -1,7 +1,6 @@
 #include "Panels.hpp"
 
 using namespace std;
-using namespace sf;
 using namespace klui;
 
 /** Panel Class **/

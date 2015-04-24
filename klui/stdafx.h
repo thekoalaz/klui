@@ -11,13 +11,6 @@
 #include <stdio.h>
 #include <tchar.h>
 
-#include <SFML/System.hpp>
-#include <SFML/Graphics.hpp>
-#include <GL/glew.h>
-#include <GL/glut.h>
-//#include <SFML/OpenGL.hpp>
-#include <glm/glm.hpp>
-
 #include <iostream>
 #include <iomanip>
 #include <fstream>
