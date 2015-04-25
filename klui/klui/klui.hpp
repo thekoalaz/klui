@@ -3,7 +3,7 @@
 #include "Window.hpp"
 #include "Panels.hpp"
 #include "Button.hpp"
-#include "scene/World.hpp"
+#include <scene/World.hpp>
 
 namespace klui
 {
@@ -36,17 +36,22 @@ public:
 
     void init(int, int);
     void display();
-    void drawElements();
+    void renderFrame();
     void startLoop();
 
+    /* Creation Methods */
     Window & createWindow(int, int);
     Window & createWindow(std::string, int, int);
     Window & createWindow(std::string, int, int, int, int);
 
-    Panel & createPanel(Window &, int width, int height, std::string name);
-    Panel & createPanel(Window &, int width, int height, int xpos, int ypos, std::string name);
+    Panel & createPanel(Window &, int, int);
+    Panel & createPanel(Window &, std::string, int, int);
+    Panel & createPanel(Window &, std::string, int, int, int, int);
 
-    Button & createButton(Panel & panel, int width, int height, int xpos, int ypos, std::string name);
+    Button & createButton(Panel & panel, std::string, int, int, int, int);
+
+    /* Getter Methods */
+    Window & getMainWindow() { return *windows_[0]; }
 
 private:
     std::vector<Window *> windows_;

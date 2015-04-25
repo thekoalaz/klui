@@ -8,8 +8,5 @@
 namespace scene
 {
 /** Class Prototypes **/
-//extern class World;
-//extern class Object;
-//extern class Camera;
 
 };

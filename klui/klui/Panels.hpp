@@ -1,8 +1,8 @@
 #pragma once
 #include "stdafx.h"
 #include "UIElement.hpp"
-#include "scene/scene.hpp"
 #include "Button.hpp"
+#include "scene/scene.hpp"
 
 namespace klui
 {
@@ -16,14 +16,14 @@ class Panel : public UIElement
 public:
     Panel(int width, int height) : UIElement(width, height), _persp(false)
     { }
-    Panel(int width, int height, std::string name) : UIElement(width, height, name), _persp(false)
+    Panel(std::string name, int width, int height) : UIElement(name, width, height), _persp(false)
     { }
-    Panel(int width, int height, int xpos, int ypos, std::string name) : UIElement(width, height, xpos, ypos, name), _persp(false)
+    Panel(std::string name, int width, int height, int xpos, int ypos) : UIElement(name, width, height, xpos, ypos), _persp(false)
     { }
     void draw();
 
     void setWorld(scene::World * world) { world_ = world; }
-    scene::World * getWorld() { return world_; }
+    scene::World & getWorld() { return *world_; }
     void setCamera(scene::Camera * camera) { camera_ = camera; }
 
     scene::Camera * getCamera() { return camera_; }

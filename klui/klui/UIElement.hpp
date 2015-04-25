@@ -22,10 +22,10 @@ public:
     UIElement(int width, int height)
         : xpos_(DEFAULT_XPOS), ypos_(DEFAULT_YPOS), width_(width), height_(height), name_(NULL)
         { init(); }
-    UIElement(int width, int height, std::string name)
+    UIElement(std::string name, int width, int height)
         : xpos_(DEFAULT_XPOS), ypos_(DEFAULT_YPOS), width_(width), height_(height), name_(name)
         { init(); }
-    UIElement(int xpos, int ypos, int width, int height, std::string name)
+    UIElement(std::string name, int width, int height, int xpos, int ypos)
         : xpos_(xpos), ypos_(ypos), width_(width), height_(height), name_(name)
         { init(); }
 

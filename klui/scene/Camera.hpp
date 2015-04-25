@@ -1,14 +1,22 @@
 #pragma once
 #include "stdafx.h"
-#include "scene.hpp"
+#include "Object.hpp"
 
 namespace scene
 {
-class Camera
+class Camera : public Object
 {
 public:
-    Camera();
-    ~Camera();
+    /* Constructors */
+    Camera() : Object() { }
+
+    void doDraw();
+
+    /* Getters*/
+    float getFocal() { return focal_; }
+
+private:
+    float focal_;
 };
 
 };

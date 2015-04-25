@@ -22,19 +22,19 @@ void Manager::startLoop()
 {
     while (windows_[0]->isOpen())
     {
-        sf::Time elapsed = clock.restart();
-        float dt = elapsed.asSeconds();
-
-        for (auto &window : windows_)
-        {
-            window->draw();
-        }
+        renderFrame();
     }
 }
 
-void Manager::drawElements()
+void Manager::renderFrame()
 {
-    //glutMainLoop();
+    sf::Time elapsed = clock.restart();
+    float dt = elapsed.asSeconds();
+
+    for (auto &window : windows_)
+    {
+        window->draw();
+    }
 }
 
 Window & Manager::createWindow(int width, int height)
@@ -51,27 +51,36 @@ Window & Manager::createWindow(std::string name, int width, int height)
     return *new_window;
 }
 
-Panel & Manager::createPanel(Window & window, int width, int height, std::string name)
+Panel & Manager::createPanel(Window & window, std::string name, int width, int height)
 {
-    Panel * new_panel = new Panel(width, height, name);
+    Panel * new_panel = new Panel(width, height);
     window.addChildren(new_panel);
     elements_.push_back(new_panel);
 
     return *new_panel;
 }
 
-Panel & Manager::createPanel(Window & window, int width, int height, int xpos, int ypos, std::string name)
+Panel & Manager::createPanel(Window & window, std::string name, int width, int height)
 {
-    Panel * new_panel = new Panel(width, height, xpos, ypos, name);
+    Panel * new_panel = new Panel(name, width, height);
     window.addChildren(new_panel);
     elements_.push_back(new_panel);
 
     return *new_panel;
 }
 
-Button & Manager::createButton( Panel & panel, int width, int height, int xpos, int ypos, std::string name)
+Panel & Manager::createPanel(Window & window, std::string name, int width, int height, int xpos, int ypos)
 {
-    Button * new_button = new Button(width, height, xpos, ypos, name);
+    Panel * new_panel = new Panel(name, width, height, xpos, ypos);
+    window.addChildren(new_panel);
+    elements_.push_back(new_panel);
+
+    return *new_panel;
+}
+
+Button & Manager::createButton( Panel & panel, std::string name, int width, int height, int xpos, int ypos)
+{
+    Button * new_button = new Button(name, width, height, xpos, ypos);
     panel.addChildren(new_button);
     elements_.push_back(new_button);
 

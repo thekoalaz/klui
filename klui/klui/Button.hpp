@@ -17,7 +17,7 @@ public:
     { }
     Button(int width, int height, int xpos, int ypos) : UIElement(width, height), _persp(false)
     { }
-    Button(int width, int height, int xpos, int ypos, std::string name) : UIElement(width, height, name), _persp(false)
+    Button(std::string name, int width, int height, int xpos, int ypos) : UIElement(name, width, height), _persp(false)
     { }
     Button(int width, int height, void * callback(void));
     void draw();
